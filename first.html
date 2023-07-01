@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System </title>
+    <link rel="stylesheet" href="first.css" />
+  </head>
+<body>
+	<h1>Welcome to Employee Management System</h1>
+	<div id="block">
+	<button onclick="location.href='user.html'">User Mode</button>
+	<button onclick="showLogin()">Admin Mode</button>
+</div>
+	<!-- Admin Mode Login Form -->
+	<div id="admin-login" style="display:none;">
+		<h2>Admin Mode Login</h2>
+		<form onsubmit="return login()">
+			<label for="admin-key">Enter Admin Key:</label>
+			<input type="password" id="admin-key" name="admin-key">
+			<input type="submit" value="Login">
+		</form>
+	</div>
+
+	<script>
+		function showLogin() {
+			document.getElementById("admin-login").style.display = "block";
+		}
+
+		function login() {
+			var key = document.getElementById("admin-key").value;
+			// Check if admin key is valid
+			if (key === "admin123") {
+				// Redirect to admin page
+				window.location.href = "admin.html";
+				return false;
+			} else {
+				alert("Invalid Admin Key");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

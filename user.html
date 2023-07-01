@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System User Mode</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <form id="employee-form">
+      <h2>Search by Entering Employee No.</h2>
+      <hr />
+      <br />
+      <div class="form">
+        <label for="emp-num">Employee Number:</label>
+        <input type="text" id="emp-num" name="emp-num" required>
+    
+        <label for="adhar-num">Adhar Number:</label>
+        <input type="text" id="adhar-num" name="adhar-num" required>
+    
+        <label for="mobile-num">Mobile Number:</label>
+        <input type="tel" id="mobile-num" name="mobile-num" required>
+    
+        <label for="department">Department:</label>
+        <select id="department" name="department">
+          <option value="sales">Sales</option>
+          <option value="marketing">Marketing</option>
+          <option value="finance">Finance</option>
+          <option value="it">IT</option>
+        </select>
+    
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+    
+      <div class="buttons">
+       
+        <button id="read">Search</button>
+       
+      </div>
+    </form>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+    <script src="firebaseconfig.js"></script>
+
+    <script src="./user.js"></script>
+  </body>
+</html>
